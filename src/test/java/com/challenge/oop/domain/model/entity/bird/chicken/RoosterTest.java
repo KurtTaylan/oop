@@ -11,7 +11,7 @@ import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class RoasterTest {
+class RoosterTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -29,21 +29,21 @@ class RoasterTest {
 
     @Test
     void sing() {
-        Roaster roaster = new Roaster();
-        roaster.sing();
+        Rooster rooster = new Rooster();
+        rooster.sing();
         assertTrue(outContent.toString().contains("Cock-a-doodle-doo"));
     }
 
     @Test
     void walk() {
-        Roaster chicken = new Roaster();
+        Rooster chicken = new Rooster();
         chicken.walk();
         assertTrue(outContent.toString().contains("I am walking"));
     }
 
     @Test
     void fly() {
-        Roaster chicken = new Roaster();
+        Rooster chicken = new Rooster();
 
         BusinessException thrown = assertThrows(
                 BusinessException.class,

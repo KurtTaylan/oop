@@ -1,25 +1,22 @@
 package com.challenge.oop.domain.model.entity.bird;
 
-import com.challenge.oop.domain.model.entity.behaviour.BirdBehaviour;
-import com.challenge.oop.domain.model.entity.behaviour.SoundBehaviour;
+import com.challenge.oop.domain.model.entity.Bird;
+import com.challenge.oop.domain.model.entity.behaviour.SoundDecorator;
 
-public class Parrot implements BirdBehaviour, SoundBehaviour {
+public class Parrot extends Bird implements SoundDecorator {
 
-    private SoundBehaviour soundBehaviour;
+    private final SoundDecorator soundDecorator;
 
-    private Parrot() {
+    private Parrot(SoundDecorator soundDecorator) {
+        this.soundDecorator = soundDecorator;
     }
 
-    private Parrot(SoundBehaviour soundBehaviour) {
-        this.soundBehaviour = soundBehaviour;
-    }
-
-    public static Parrot buildWith(SoundBehaviour soundBehaviour) {
-        return new Parrot(soundBehaviour);
+    public static Parrot buildWith(SoundDecorator soundDecorator) {
+        return new Parrot(soundDecorator);
     }
 
     @Override
     public void sing() {
-        System.out.println(soundBehaviour.decorateSound());
+        System.out.println(soundDecorator.decorateSound());
     }
 }

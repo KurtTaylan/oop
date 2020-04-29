@@ -1,20 +1,17 @@
 package com.challenge.oop.domain.model.entity.bird;
 
-import com.challenge.oop.domain.model.entity.behaviour.BirdBehaviour;
+import com.challenge.oop.domain.model.entity.Bird;
+import com.challenge.oop.domain.model.entity.behaviour.Swimmable;
 
-public class Duck implements BirdBehaviour {
+public class Duck extends Bird implements Swimmable {
 
     @Override
     public void sing() {
-        System.out.println("Quack, quack");
+        System.out.println(decorateSound());
     }
 
     @Override
     public String decorateSound() {
         return "Quack, quack";
-    }
-
-    public void swim() {
-        System.out.println("I am swimming");
     }
 }

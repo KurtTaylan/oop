@@ -1,6 +1,6 @@
 package com.challenge.oop.domain.model.entity.bird;
 
-import com.challenge.oop.domain.model.entity.bird.chicken.Roaster;
+import com.challenge.oop.domain.model.entity.bird.chicken.Rooster;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,7 +27,7 @@ class ParrotTest {
 
     @Test
     void singWithRoaster() {
-        Parrot parrotWithRoaster = Parrot.buildWith(new Roaster());
+        Parrot parrotWithRoaster = Parrot.buildWith(new Rooster());
         parrotWithRoaster.sing();
         assertTrue(outContent.toString().contains("Cock-a-doodle-doo"));
     }

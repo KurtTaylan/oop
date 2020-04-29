@@ -1,6 +1,6 @@
 package com.challenge.oop.domain.model.entity.behaviour;
 
-public interface SoundBehaviour {
+public interface SoundDecorator {
 
     default String decorateSound() {
         return "";

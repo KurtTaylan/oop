@@ -1,4 +1,4 @@
-package com.challenge.oop.domain.model.entity;
+package com.challenge.oop.domain.model.entity.fish;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class AnimalTest {
+class ClownFishTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -25,9 +25,9 @@ class AnimalTest {
     }
 
     @Test
-    void walk() {
-        Animal animal = new Animal();
-        animal.walk();
-        assertTrue(outContent.toString().contains("I am walking"));
+    void makeJoke() {
+        ClownFish clownFish = new ClownFish();
+        clownFish.makeJoke();
+        assertTrue(outContent.toString().contains("I am joking"));
     }
 }

@@ -78,11 +78,12 @@ To change the behaviour of the class we `override` the methods of super class. A
 Image: ./documents/answer-3-class-diagram.png
 
 ###Answer 3.B) How is the rooster related to the chicken?
-According to dictionary, Rooster = An adult male chicken. 
+According to dictionary, Rooster = An adult male chicken while it is bird, What we can do is to extend it from Bird and use
+Composition of Chicken when we execute same functionalities like `fly`.  
 
 ###Answer 3.C) Can you think of other ways to model a rooster without using inheritance?
 We can use more flexible modelling with `interfaces` to wrap `all behaviours`. Moreover, we could use `composition` by 
-injecting chicken into rooster but relationship become `has-a` relationship when it should be `is-a` relationship. 
+injecting chicken into rooster. 
 
 
 ##Answer: 4, Can you model a parrot? We are specifically interested in three parrots, one that lived in a house with dogs one in a house with cats, the other lived on a farm next to the rooster.
@@ -93,3 +94,5 @@ I create SoundBehaviour which implements `Decorator Design Pattern` to build up 
 ##Question Section: B, 
 
 ##Answer: 1, In addition to the birds, can you model a fish?
+
+##Answer: 2, Can you specialize the fish as a Shark and as a Clownfish?
