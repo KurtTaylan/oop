@@ -89,3 +89,7 @@ injecting chicken into rooster but relationship become `has-a` relationship when
 Image: ./documents/answer4-class-diagram.png
 
 I create SoundBehaviour which implements `Decorator Design Pattern` to build up the behaviour. You can find example on ParrotTest
+
+##Question Section: B, 
+
+##Answer: 1, In addition to the birds, can you model a fish?
