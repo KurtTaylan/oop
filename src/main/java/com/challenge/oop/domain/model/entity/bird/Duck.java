@@ -9,6 +9,11 @@ public class Duck implements BirdBehaviour {
         System.out.println("Quack, quack");
     }
 
+    @Override
+    public String decorateSound() {
+        return "Quack, quack";
+    }
+
     public void swim() {
         System.out.println("I am swimming");
     }

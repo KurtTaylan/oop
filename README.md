@@ -83,3 +83,9 @@ According to dictionary, Rooster = An adult male chicken.
 ###Answer 3.C) Can you think of other ways to model a rooster without using inheritance?
 We can use more flexible modelling with `interfaces` to wrap `all behaviours`. Moreover, we could use `composition` by 
 injecting chicken into rooster but relationship become `has-a` relationship when it should be `is-a` relationship. 
+
+
+##Answer: 4, Can you model a parrot? We are specifically interested in three parrots, one that lived in a house with dogs one in a house with cats, the other lived on a farm next to the rooster.
+Image: ./documents/answer4-class-diagram.png
+
+I create SoundBehaviour which implements `Decorator Design Pattern` to build up the behaviour. You can find example on ParrotTest

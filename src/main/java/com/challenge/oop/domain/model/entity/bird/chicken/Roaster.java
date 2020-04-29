@@ -8,4 +8,9 @@ public class Roaster implements ChickenBehaviour {
     public void sing() {
         System.out.println("Cock-a-doodle-doo");
     }
+
+    @Override
+    public String decorateSound() {
+        return "Cock-a-doodle-doo";
+    }
 }

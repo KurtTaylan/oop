@@ -4,4 +4,8 @@ import com.challenge.oop.domain.model.entity.behaviour.ChickenBehaviour;
 
 public class Chicken implements ChickenBehaviour {
 
+    @Override
+    public String decorateSound() {
+        return "Cluck, cluck";
+    }
 }
