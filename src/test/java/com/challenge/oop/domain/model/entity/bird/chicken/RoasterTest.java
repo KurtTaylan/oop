@@ -1,4 +1,4 @@
-package com.challenge.oop.domain.model.entity.bird;
+package com.challenge.oop.domain.model.entity.bird.chicken;
 
 import com.challenge.oop.domain.model.exception.BusinessException;
 import org.junit.jupiter.api.AfterEach;
@@ -11,7 +11,7 @@ import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class ChickenTest {
+class RoasterTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -26,29 +26,31 @@ class ChickenTest {
         System.setOut(originalOut);
     }
 
+
+    @Test
+    void sing() {
+        Roaster roaster = new Roaster();
+        roaster.sing();
+        assertTrue(outContent.toString().contains("Cock-a-doodle-doo"));
+    }
+
     @Test
     void walk() {
-        Chicken chicken = new Chicken();
+        Roaster chicken = new Roaster();
         chicken.walk();
         assertTrue(outContent.toString().contains("I am walking"));
     }
 
     @Test
     void fly() {
-        Chicken chicken = new Chicken();
+        Roaster chicken = new Roaster();
 
         BusinessException thrown = assertThrows(
                 BusinessException.class,
                 chicken::fly,
                 "Expected fly() to throw, but it didn't"
         );
-        assertTrue(thrown.getMessage().contains("Cannot fly"));
-    }
 
-    @Test
-    void sing() {
-        Chicken chicken = new Chicken();
-        chicken.sing();
-        assertTrue(outContent.toString().contains("Cluck, cluck"));
+        assertTrue(thrown.getMessage().contains("Cannot fly"));
     }
 }

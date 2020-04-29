@@ -73,3 +73,13 @@ Image: ./documents/answer-2-class-diagram.png
 
 To change the behaviour of the class we `override` the methods of super class. Also, to prevent some behavior to happen, we are throwing customized runtime error.   
 
+##Answer: 3, Now how would you model a rooster?
+
+Image: ./documents/answer-3-class-diagram.png
+
+###Answer 3.B) How is the rooster related to the chicken?
+According to dictionary, Rooster = An adult male chicken. 
+
+###Answer 3.C) Can you think of other ways to model a rooster without using inheritance?
+We can use more flexible modelling with `interfaces` to wrap `all behaviours`. Moreover, we could use `composition` by 
+injecting chicken into rooster but relationship become `has-a` relationship when it should be `is-a` relationship. 

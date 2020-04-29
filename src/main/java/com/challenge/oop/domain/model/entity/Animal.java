@@ -1,8 +1,7 @@
 package com.challenge.oop.domain.model.entity;
 
-public class Animal {
+import com.challenge.oop.domain.model.entity.behaviour.AnimalBehaviour;
 
-    public void walk(){
-        System.out.println("I am walking");
-    }
+public class Animal implements AnimalBehaviour {
+
 }

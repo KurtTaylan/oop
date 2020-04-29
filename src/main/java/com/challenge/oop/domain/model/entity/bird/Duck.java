@@ -1,13 +1,8 @@
 package com.challenge.oop.domain.model.entity.bird;
 
-import com.challenge.oop.domain.model.entity.Bird;
+import com.challenge.oop.domain.model.entity.behaviour.BirdBehaviour;
 
-public class Duck extends Bird {
-
-    @Override
-    public void fly() {
-        System.out.println("I am flying");
-    }
+public class Duck implements BirdBehaviour {
 
     @Override
     public void sing() {

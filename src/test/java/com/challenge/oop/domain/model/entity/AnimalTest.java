@@ -28,6 +28,6 @@ class AnimalTest {
     void walk() {
         Animal animal = new Animal();
         animal.walk();
-        assertTrue(outContent.toString().contains("I am flying"));
+        assertTrue(outContent.toString().contains("I am walking"));
     }
 }

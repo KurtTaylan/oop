@@ -1,12 +1,7 @@
 package com.challenge.oop.domain.model.entity;
 
-public class Bird extends Animal {
+import com.challenge.oop.domain.model.entity.behaviour.BirdBehaviour;
 
-    public void fly() {
-        System.out.println("I am flying");
-    }
+public class Bird implements BirdBehaviour {
 
-    public void sing() {
-        System.out.println("I am singing");
-    }
 }
