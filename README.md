@@ -52,17 +52,24 @@ Domain Map for oop application is like following;
 
 
 ##6.Q&A
-###Question Section: A, Can you implement the sing() method for the bird?
+##Question Section: A, 
+
+##Answer: 1, Can you implement the sing() method for the bird?
 
 Image: ./documents/answer-1-class-diagram.png
 
-####Answer 1.a) How did you unit test it?
+###Answer 1.a) How did you unit test it?
 I would test either what input I would give or side effect - outcome. 
 In this case System out stream would have the side effect of SUT (Software Under Test) so I would test what the output will be.
 
-####Answer 1.b) How did you optimize the code for maintainability?
+###Answer 1.b) How did you optimize the code for maintainability?
 For this stage not much to optimize, only things verifying output stream seems much effort, I would find a way easier output channel
 maybe instead of printing out stream I would modiyf methods to return results of the action so I could test the result of the SUT
 easily by checking returned value.
 
+##Answer 2) Now, we have 2 special kinds of birds: the Duck and the Chicken... Can you implement them to make their own special sound?
+
+Image: ./documents/answer-2-class-diagram.png
+
+To change the behaviour of the class we `override` the methods of super class. Also, to prevent some behavior to happen, we are throwing customized runtime error.   
 
